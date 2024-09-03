@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.oval {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.top-bar {
+    display: none;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.top-bar .logo {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.top-search {
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.top-link {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.search-bar {
+    padding: 10px;
+    text-align: center;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.category {
+    padding: 20px;
+    margin: 10px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    width: calc(25% - 40px);
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for Fullscreen */
+@media (min-width: 1024px) {
+    .footer {
+        display: none;
+    }
+
+    .top-bar {
+        display: flex;
+    }
+}
