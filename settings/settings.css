@@ -1,3 +1,4 @@
+/* Estilos generales para todas las pantallas */
 body {
     font-family: Roboto, sans-serif;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     text-align: center;
 }
 
+/* Encabezado del perfil */
 .header {
     background: linear-gradient(to right, #673ab7, #512da8);
     color: white;
@@ -37,6 +39,7 @@ body {
     font-weight: bold;
 }
 
+/* Estilos de la sección de configuración */
 .settings {
     padding: 20px;
 }
@@ -76,6 +79,7 @@ body {
     transform: scale(1.5);
 }
 
+/* Footer para la vista móvil */
 .footer {
     background-color: #673ab7;
     padding: 10px;
@@ -95,4 +99,107 @@ body {
 
 .material-icons {
     font-size: 32px;
+}
+
+/* Aseguramos que la vista móvil mantenga su diseño en pantallas pequeñas */
+@media (max-width: 1023px) {
+    .top-bar {
+        display: none;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1024px) {
+    /* Ocultar el footer en pantallas grandes */
+    .footer {
+        display: none;
+    }
+
+    .header {
+        display: none;
+    }
+
+    /* Barra superior de navegación */
+    .top-bar {
+        width: 100%;
+        background-color: #673ab7;
+        display: flex;
+        align-items: center;
+        padding: 10px 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        justify-content: space-between;
+    }
+
+    /* Ajuste de elementos flexibles */
+    .top-bar > * {
+        flex-grow: 1; /* Asegura que cada elemento crezca de manera uniforme */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Contenedor centralizado */
+    .center-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        gap: 10px;
+    }
+
+    /* Logo de la app que también actúa como botón de inicio */
+    .top-bar .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .top-bar .logo img {
+        height: 40px;
+        cursor: pointer;
+    }
+
+    /* Barra de búsqueda centrada */
+    .search-bar {
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        width: 200px; /* Ajuste del ancho para que los demás elementos se vean bien */
+    }
+
+    /* Links de "Mis Ratings" y "Mis Préstamos" */
+    .top-link {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        margin-left: 30px; /* Añadir espacio entre los links */
+    }
+
+    .top-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Imagen de perfil en la barra superior */
+    .profile-pic-top {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid white;
+        background-color: #d3d3d3;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+    }
+
+    /* Ajustar el resto del contenido */
+    body {
+        padding-top: 80px; /* Para que no se superponga la barra superior */
+    }
+
+    .settings {
+        margin-top: 20px;
+    }
 }
